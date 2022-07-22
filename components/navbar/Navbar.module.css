@@ -1,0 +1,185 @@
+/* .siteheaderwrapper{
+    background: linear-gradient(to left, #d51646, #9d0574, #830a58, #bd034b, #bb3b39, #bd393a, #ba044f, #96023c, #51061c);
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    } */
+
+
+.siteheader{
+
+    width: 100%;
+
+    
+}
+
+.siteheaderwrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+
+}
+
+.navbartopwrapper{
+    width: 100%;
+
+
+}
+/* .gradientborder{
+    max-width: 100%;
+    height: 100%;
+
+}
+
+.gradientborder::after{
+    content: "";
+    background: linear-gradient(to left, #d51646, #9d0574, #830a58, #bd034b, #bb3b39, #bd393a, #ba044f, #96023c, #51061c);
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+} */
+
+.navbartopinner{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 0 60px;
+
+}
+
+.navbarlist{
+    display: flex;
+    list-style: none;
+    color: #FBBD08;
+    margin: 0;
+    padding: 0;
+
+    /* justify-content: space-between; */
+
+    
+}
+
+.navbaritem{
+    padding: 10px 10px 6px;
+
+}
+
+.navbarlink{
+    /* margin: 10px 10px 6px; */
+    font-weight: 400;
+    font-size: 11px;
+}
+.navbarlink:hover{
+
+    color: #26df26;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.navbarmiddlewrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px 30px;
+
+
+
+}
+
+.navbarcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* width: 600px; */
+}
+
+.navbarright{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* width: 100%; */
+    /* padding: 0 60px; */
+}
+.navbarrightinner{
+    /* width: 100%; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* padding: 0 60px; */
+
+}
+
+.navbarmiddleright{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+
+    /* width: 600px; */
+}
+
+.navbarsearchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 100%; */
+    
+
+}
+
+.navbarsearchbarinner{
+    
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    
+    
+}
+
+.navbarsearchbarinput{
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+
+    width: 600px;
+    height: 40px;
+    border: none;
+    /* border-radius: 5px; */
+    background-color: #000;
+    color: #fff;
+    padding: 9px 13px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid gray;
+
+}
+.navbarsearchbarinput:focus{
+    border: 1px solid #26df26;
+}
+
+
+
+.navbarbutton{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #49494a;
+    cursor: pointer; 
+    margin-left: 10px;
+    
+}
+
