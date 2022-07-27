@@ -48,7 +48,10 @@ const NavbarBottom = () => {
               </a>
             </li>
 
-            <li className={styles.navbarbottomitem}>
+            <li
+              className={styles.navbarbottomitem}
+              style={{ marginRight: "30px" }}
+            >
               <a href="#" className={styles.navbarbottomlink}>
                 <span className={styles.navbarbottomlinktext}>
                   İŞ İSTASYONLARI

@@ -11,6 +11,8 @@ import { style } from "@mui/system";
 import Navbar from "../components/navbar/Navbar";
 import NavbarBottom from "../components/navbar-bottom/NavbarBottom";
 import FirstSection from "../components/first-section/FirstSection";
+import Card from "../components/card/Card";
+import CardList from "../components/card/CardList";
 
 export default function Home() {
   return (
@@ -23,6 +25,8 @@ export default function Home() {
       <Navbar />
       <NavbarBottom />
       <FirstSection />
+      <CardList />
+      <Card />
     </div>
   );
 }

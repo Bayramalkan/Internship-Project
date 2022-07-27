@@ -8,13 +8,13 @@
 
 .siteheader{
 
-    width: 100%;
+    width: 100% !important;
 
     
 }
 
 .siteheaderwrapper{
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     background-color: #000;
 
@@ -94,76 +94,27 @@
     align-items: center;
     width: 100%;
     /* width: 600px; */
+    margin-top: 10px;
+
 }
 
 .navbarright{
+    width: 100%;
     display: flex;
     justify-content: right;
     align-items: center;
     /* width: 100%; */
     /* padding: 0 60px; */
+    margin-top: 20px;
 }
 .navbarrightinner{
     /* width: 100%; */
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     /* padding: 0 60px; */
 
 }
-
-.navbarmiddleright{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-
-    /* width: 600px; */
-}
-
-.navbarsearchbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* max-width: 100%; */
-    
-
-}
-
-.navbarsearchbarinner{
-    
-    position: relative;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    
-    
-}
-
-.navbarsearchbarinput{
-    /* position: absolute; */
-    display: flex;
-    align-items: center;
-
-    width: 600px;
-    height: 40px;
-    border: none;
-    /* border-radius: 5px; */
-    background-color: #000;
-    color: #fff;
-    padding: 9px 13px;
-    font-size: 14px;
-    font-weight: 400;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid gray;
-
-}
-.navbarsearchbarinput:focus{
-    border: 1px solid #26df26;
-}
-
-
 
 .navbarbutton{
     width: 100px;
@@ -182,4 +133,60 @@
     margin-left: 10px;
     
 }
+
+
+.navbarmiddleright{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    /* height: 40px; */
+
+    /* width: 600px; */
+}
+
+.navbarsearchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 100%; */
+    
+
+}
+
+.navbarsearchbarinner{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+
+    
+    
+}
+
+.navbarsearchbarinput{
+    /* position: absolute; */
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    /* border-radius: 5px; */
+    background-color: #000;
+    color: #fff;
+    padding: 9px 13px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid gray;
+
+}
+.navbarsearchbarinput:focus{
+    border: 1px solid #26df26;
+}
+
+
+
 

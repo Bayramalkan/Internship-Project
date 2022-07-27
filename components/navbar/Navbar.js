@@ -8,6 +8,9 @@ import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { color, style } from "@mui/system";
 
+// TASKS
+// Responsive sorunları çözülmeli.
+
 const Navbar = () => {
   return (
     <header className={styles.siteheader}>
@@ -74,104 +77,102 @@ const Navbar = () => {
             </div>
           </div>
           <div className={styles.navbarmiddlewrapper}>
-            {/* <div
-          className="navbarmiddleleft"
-          style={{
-            backgroundColor: "red",
-          }}
-        >
-        </div> */}
-            <a href="">
-              <NavbarLogo
-                height={65}
-                style={
-                  {
-                    //   width: "100%",
-                  }
-                }
-              />
-            </a>
-            <div className={styles.navbarmiddleright}>
-              <div className={styles.navbarcenter}>
-                <div className={styles.navbarsearchbarinner}>
-                  <div className={styles.navbarsearchbar}>
-                    <input
-                      type="text"
-                      maxLength="55"
-                      autoComplete="off"
-                      className={styles.navbarsearchbarinput}
-                      placeholder="Arama Yap"
-                    />
-                  </div>
-                  <SearchIcon
+            <div
+              className="navbarmiddleleft"
+              style={{
+                // backgroundColor: "red",
+                width: "100%",
+              }}
+            >
+              <a
+                href=""
+                // style={{
+                //   width: "100%",
+                // }}
+              >
+                <NavbarLogo height={65} />
+              </a>
+            </div>
+            <div className={styles.navbarcenter}>
+              <div className={styles.navbarsearchbarinner}>
+                {/* <div className={styles.navbarsearchbar}>
+                    </div> */}
+                <input
+                  type="text"
+                  maxLength="55"
+                  autoComplete="off"
+                  className={styles.navbarsearchbarinput}
+                  placeholder="Arama Yap"
+                />
+                <SearchIcon
+                  style={{
+                    position: "absolute",
+                    // zIndex: "1",
+                    // marginLeft: "px",
+                    marginRight: "10px",
+                    color: "#FFF",
+                  }}
+                />
+              </div>
+            </div>
+            {/* <div className={styles.navbarmiddleright}>
+                  </div> */}
+            <div className={styles.navbarright}>
+              {/* <div className={styles.navbarrightinner}>
+                    </div> */}
+              <a href="">
+                <button className={styles.navbarbutton}>
+                  <span
                     style={{
-                      position: "absolute",
-                      // zIndex: "1",
-                      // marginLeft: "px",
-                      marginRight: "10px",
-                      color: "#FFF",
+                      color: "#26df26",
+                      lineHeight: "22px",
+                      fontSize: "14px",
+                    }}
+                  >
+                    Harici Ödeme
+                  </span>
+                </button>
+              </a>
+              <a href="">
+                <button className={styles.navbarbutton}>
+                  {/* <div>
+                </div> */}
+                  <PersonIcon
+                    style={{
+                      color: "000",
+                      backgroundColor: "#FFF",
+                      borderRadius: "50%",
+                      //   marginRight: "5px",
                     }}
                   />
-                </div>
-              </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      textAlign: "left",
+                    }}
+                  >
+                    <span>Giriş Yap</span>
 
-              <div className={styles.navbarright}>
-                <div className={styles.navbarrightinner}>
-                  <a href="">
-                    <button className={styles.navbarbutton}>
-                      <span
-                        style={{
-                          color: "#26df26",
-                          lineHeight: "22px",
-                          fontSize: "14px",
-                        }}
-                      >
-                        Harici Ödeme
-                      </span>
-                    </button>
-                  </a>
-                  <a href="">
-                    <button className={styles.navbarbutton}>
-                      {/* <div>
-                </div> */}
-                      <PersonIcon
-                        style={{
-                          color: "000",
-                          backgroundColor: "#FFF",
-                          borderRadius: "50%",
-                          //   marginRight: "5px",
-                        }}
-                      />
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          textAlign: "left",
-                        }}
-                      >
-                        <span>Giriş Yap</span>
+                    <span
+                      style={{
+                        fontSize: "10px",
+                        color: "#FBBD08",
+                      }}
+                    >
+                      Kayıt Ol
+                    </span>
+                  </div>
+                </button>
+              </a>
 
-                        <span
-                          style={{
-                            fontSize: "10px",
-                            color: "#FBBD08",
-                          }}
-                        >
-                          Kayıt Ol
-                        </span>
-                      </div>
-                    </button>
-                  </a>
-
-                  <a href="">
-                    <button className={styles.navbarbutton}>
-                      {" "}
-                      <ShoppingCartIcon />
-                      <span>Sepetim</span>
-                    </button>
-                  </a>
-                </div>
-              </div>
+              <a href="">
+                <button className={styles.navbarbutton}>
+                  {" "}
+                  <ShoppingCartIcon />
+                  <span>Sepetim</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
