@@ -1,42 +1,35 @@
-.cardListContainer{
+.cardListwrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
-    /* align-items: center; */
-    /* margin: 0 auto; */
+    /* justify-content: center; */
+    flex: 75%;
     background-color: #1b1c1d;
     width: 100%;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     margin-top: 50px;
-}
-
-.container{
-    margin-right: 10px;
+    gap: 20px;
+    /* max-width: 100%; */
 
 }
 
-/* .wrapper{
-    background-color: #1b1c1d;
-    color: #fff;
- 
-    
-    width: 100%;
-    height: auto;
 
 
-    display: flex;
-    flex-wrap: wrap;
-
-    border: 5px solid #fff;
-
-} */
 
 .cardwrapper{
-    /* width: 100%; */
+    
+    max-width: 100%;
+
+    border: gray solid 1px;
+
 }
 
-.cardImage{
-    /* width: 100%; */
+.cardwrapper:hover{
+    border: lime solid 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* .cardImage{
+    max-width: 100%;
     height: auto;
     border-radius: 5px;
     background-color: #1b1c1d;
@@ -49,19 +42,17 @@
     padding: 10px;
     margin: 10px;
     border: 5px solid #fff;
-}
+} */
 
-.cardimage{
+/* .cardimage{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* max-width: 350px; */
     border-top: 1px solid #323334;
     border-bottom: 1px solid #323334;
     border-left: 1px solid#323334;
     border-right: 1px solid #323334;
-    /* margin: 100px; */
-}
+} */
 
 .compare{
     /* max-width: 350px; */
@@ -100,40 +91,78 @@
 .cardinfo{
     text-align: left;
     background-color: #161617;
-    width: 350px;
+    max-width: 253px;
     color: white;
+    padding-bottom: 20px;
+
+}
+
+.carddescription{
+
+    /* margin-bottom: 20px; */
+    margin-left: -20px;
+    margin-right: 30px;
+    
+    /* max-height: 128px; */
+    overflow: hidden;
+    line-height: 1.83;
+    color: #a4a4a5;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+}
+
+.carddescription ul{
+    -webkit-line-clamp: 7;
+    max-height: 10.5em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    position: relative;
+    line-height: 1.5;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.carddescription li{
+    position: relative;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    list-style-position: inside;
+    color: #a4a4a5;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+
 
 }
 
 .cardtitle{
     max-height: 45px;
     min-height: 45px;
-    margin-bottom: 18px;
-    /* display: block; */
+    /* margin-bottom: 18px; */
     font-size: 18px;
     line-height: 1.25;
     color: #fff;
     font-weight: normal;
+    margin-left: 20px;
 }
 
-.carddescription{
-    max-height: 45px;
-    min-height: 45px;
-    margin-bottom: 18px;
-    /* display: block; */
-    font-size: 14px;
-    line-height: 1.25;
-    color: #fff;
-    font-weight: normal;
-    color: #a4a4a5;
-}
+
 
 .commentwrapper
 {
     display: flex;
     justify-content: left;
     align-items: center;
-    margin: 10px 20px;
+    /* margin: 10px 20px; */
 
 }
 
@@ -141,7 +170,7 @@
     max-width: 350px;
     max-height: 45px;
     min-height: 45px;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
     /* display: block; */
     font-size: 18px;
     line-height: 1.25;
@@ -170,8 +199,58 @@
     -webkit-transition: all 0.2s ease;
     height: 48px;
     padding: 12px 10px;
+    
 }
 .cardbutton:hover{
     background-color: #26df2e;
     color: #fff;
 }
+
+
+@media screen and (max-width: 960px) {
+
+    .cardContainer{
+        width: 100%;
+
+    }
+    .cardListContainer{
+        
+        margin-left: 0px;
+        margin-top: 0px;
+
+    }
+
+    .cardListwrapper{
+        padding: 31px;
+        gap: 0px;
+        width: 100%;
+    }
+    .cardinfo{
+        max-width: 100%;
+    }
+
+    .cardwrapper{
+        /* margin: 31px; */
+        /* flex: 33%; */
+        /* width: 100%; */
+        max-width: 49%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .cardwrapper{
+        /* margin: 31px; */
+        /* flex: 33%; */
+        /* width: 100%; */
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        
+    }
+ 
+}
+    

@@ -2,66 +2,31 @@ import React from "react";
 import styles from "./NavbarBottom.module.css";
 
 const NavbarBottom = () => {
+  const NavbarBottomData = [
+    "TÜM LAPTOPLAR",
+    "OYUN BİLGİSAYARLARI",
+    "OYUNCU EKİPMANLARI",
+    "OYUNCU MONİTÖRÜ",
+    "İŞ BİLGİSAYARLARI",
+    "İŞ İSTASYONLARI",
+  ];
   return (
-    <div className={styles.container}>
-      <div className={styles.navbarbottomwrapper}>
-        <div className={styles.border}></div>
-        <div className={styles.navbarbottomlistWraper}>
-          <ul className={styles.navbarbottomlist}>
-            <li className={styles.navbarbottomitem}>
-              <a href="#" className={styles.navbarbottomlink}>
-                <span className={styles.navbarbottomlinktext}>
-                  TÜM LAPTOPLAR
-                </span>
-              </a>
-            </li>
-
-            <li className={styles.navbarbottomitem}>
-              <a href="#" className={styles.navbarbottomlink}>
-                <span className={styles.navbarbottomlinktext}>
-                  OYUN BİLGİSYARLARI
-                </span>
-              </a>
-            </li>
-
-            <li className={styles.navbarbottomitem}>
-              <a href="#" className={styles.navbarbottomlink}>
-                <span className={styles.navbarbottomlinktext}>
-                  OYUNCU EKİPMANLARI
-                </span>
-              </a>
-            </li>
-
-            <li className={styles.navbarbottomitem}>
-              <a href="#" className={styles.navbarbottomlink}>
-                <span className={styles.navbarbottomlinktext}>
-                  OYUNCU MONİTÖRÜ
-                </span>
-              </a>
-            </li>
-
-            <li className={styles.navbarbottomitem}>
-              <a href="#" className={styles.navbarbottomlink}>
-                <span className={styles.navbarbottomlinktext}>
-                  İŞ BİLGİSAYARLARI
-                </span>
-              </a>
-            </li>
-
-            <li
-              className={styles.navbarbottomitem}
-              style={{ marginRight: "30px" }}
-            >
-              <a href="#" className={styles.navbarbottomlink}>
-                <span className={styles.navbarbottomlinktext}>
-                  İŞ İSTASYONLARI
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
+    // <div className={styles.container}>    </div>
+    // <div className={styles.navbarbottomwrapper}>      </div>
+    <>
+      <div className={styles.border}></div>
+      <div className={styles.navbarbottomlistWraper}>
+        <ul className={styles.navbarbottomlist}>
+          {NavbarBottomData.map((item, index) => {
+            return (
+              <li className={styles.navbarbottomitem} key={index}>
+                {item}
+              </li>
+            );
+          })}
+        </ul>
       </div>
-    </div>
+    </>
   );
 };
 

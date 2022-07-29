@@ -1,0 +1,12 @@
+.categoryWrapper{
+    flex: 25%;
+}
+
+
+@media screen and (max-width: 960px) {
+    .categoryWrapper{
+        display: none;
+    }
+
+    
+}

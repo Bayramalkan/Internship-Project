@@ -22,6 +22,8 @@
 
 .navbartopwrapper{
     width: 100%;
+    display: flex;
+    justify-content: right;
 
 
 }
@@ -42,14 +44,15 @@
 
 .navbartopinner{
     width: 100%;
-    display: flex;
-    justify-content: right;
+
     padding: 0 60px;
 
 }
 
 .navbarlist{
+    width: 100%;
     display: flex;
+    justify-content: right;
     list-style: none;
     color: #FBBD08;
     margin: 0;
@@ -61,7 +64,7 @@
 }
 
 .navbaritem{
-    padding: 10px 10px 6px;
+    padding: 0 10px 10px 6px;
 
 }
 
@@ -133,6 +136,19 @@
     margin-left: 10px;
     
 }
+.navbarmiddlewrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.navbarmiddleleft{
+    width: 100%;
+
+}
 
 
 .navbarmiddleright{
@@ -187,6 +203,58 @@
     border: 1px solid #26df26;
 }
 
+@media screen and (max-width:960px){
+    .navbartopwrapper{
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        background-color: #161617;
+    }
+    .navbartopinner{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .navbarlist{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* width: 100%; */
+        padding: 0;
+        margin: 0;
+        background-color: #161617;
+
+    }
+
+
+    .navbarmiddlewrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        background-color: #161617;
+
+    }
+    .navbarcenter{
+        display: none
+    }
+    .navbarright{
+        /* width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #161617;
+        flex-direction: column; */
+        display: none;
+    }
+    
+}
+    
 
 
 
