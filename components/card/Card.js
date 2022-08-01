@@ -16,26 +16,27 @@ const Card = ({ item }) => {
           width={253}
           height={168}
           layout="responsive"
-          loading="lazy"
+          priority={true}
+          // sizes="50vw"
+          // loading="lazy"
           objectFit="cover"
           objectPosition="center"
         />
       )}
 
-      <div className={styles.compare}>
-        <div className={styles.comparewrapper}>
-          <input type="checkbox" id="checkbox" className={styles.checkbox} />
-          <label
-            htmlFor="checkbox"
-            className={styles.checkboxlabel}
-            style={{
-              marginTop: "3px",
-              marginLeft: "10px",
-            }}
-          >
-            Karşılaştır
-          </label>
-        </div>
+      {/* <div className={styles.compare}>      </div> */}
+      <div className={styles.comparewrapper}>
+        <input type="checkbox" id="checkbox" className={styles.checkbox} />
+        <label
+          htmlFor="checkbox"
+          className={styles.checkboxlabel}
+          style={{
+            marginTop: "3px",
+            marginLeft: "10px",
+          }}
+        >
+          Karşılaştır
+        </label>
       </div>
 
       <div className={styles.cardinfo}>
@@ -70,7 +71,8 @@ const Card = ({ item }) => {
           }}
         >
           <a href="" className={styles.cardbutton}>
-            <span style={{ textAlign: "center" }}>Sepete Ekle</span>
+            {/* <span style={{ textAlign: "center" }}>Sepete Ekle</span> */}
+            Sepete Ekle
           </a>
         </div>
       </div>
