@@ -1,3 +1,53 @@
+// import React from "react";
+// import styles from "./Category.module.css";
+// import { categories } from "./CategoryItem";
+// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
+// const Category = () => {
+//   // const [heading, setHeading] = useState("");
+//   return (
+//     <div className={styles.categoryWrapper}>
+//       <div className={styles.categoryTitle}>
+//         KATEGORİLER
+//         <KeyboardArrowDownIcon
+//           style={{
+//             color: "#26df2e",
+//             cursor: "pointer",
+//           }}
+//         />
+//       </div>
+//       {categories.map((category, index) => {
+//         return (
+//           <div className={styles.categoryListWrapper} key={index}>
+//             {category.title}
+//             <div>
+//               {category.submenu.map((submenu, index) => {
+//                 return (
+//                   <div key={index}>
+//                     {submenu.title}
+//                     {submenu.submenu.map((subsubmenu, index) => {
+//                       return (
+//                         <div key={index}>
+//                           {subsubmenu.title}
+//                           {subsubmenu.submenu.map((subitem, index) => {
+//                             return <div key={index}>{subitem.title}</div>;
+//                           })}
+//                         </div>
+//                       );
+//                     })}
+//                   </div>
+//                 );
+//               })}
+//             </div>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// };
+
+// export default Category;
+
 import React, { useEffect, useState } from "react";
 import styles from "./Category.module.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -11,7 +61,8 @@ const Category = ({ category, depthLevel }) => {
 
   const [isCategoryOpen, setIsCategoryOpen] = useState(true);
   const [isPcCategoryOpen, setIsPcCategoryOpen] = useState(false);
-  const [isPcOpen, SetIsPcOpen] = useState(false);
+  const [isPcOpen, SetIsPcOpen] = useState(null);
+  const [isPcItemOpen, setIsPcItemOpen] = useState(null);
 
   const handleCategoryOpen = () => {
     setIsCategoryOpen(!isCategoryOpen);
@@ -21,8 +72,14 @@ const Category = ({ category, depthLevel }) => {
     setIsPcCategoryOpen(!isPcCategoryOpen);
   };
 
-  const handlePcOpen = () => {
-    SetIsPcOpen(!isPcOpen);
+  const handlePcOpen = (i) => {
+    SetIsPcOpen(i);
+    console.log(i);
+  };
+
+  const handlePcItemOpen = (i) => {
+    SetIsPcOpen(i);
+    console.log(i);
   };
 
   return (
@@ -61,28 +118,25 @@ const Category = ({ category, depthLevel }) => {
                 <ul
                   className={styles.categorySubmenu}
                   key={index}
-                  onClick={handlePcOpen}
+                  onClick={() => handlePcOpen(index)}
                 >
                   {item.title}
-                  {item.submenu.map((subitem, index) => {
-                    console.log("subitem", subitem);
-                    return isPcOpen ? (
-                      <ul className={styles.categorySubSubmenu} key={index}>
-                        {subitem.title}
-
-                        {subitem.submenu.map((subsubitem, index) => {
-                          return (
-                            <li
-                              className={styles.categorySubSubListİtem}
-                              key={index}
-                            >
-                              {subsubitem.title}
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    ) : null;
-                  })}
+                  {isPcOpen === index
+                    ? item.submenu.map((subitem, index) => {
+                        return (
+                          <li key={index}>
+                            {subitem.title}
+                            {subitem.submenu.map((subsubitem, index) => {
+                              return (
+                                <ul key={index}>
+                                  <li key={index}>{subsubitem.title}</li>
+                                </ul>
+                              );
+                            })}
+                          </li>
+                        );
+                      })
+                    : null}
                 </ul>
               ) : null;
             })}

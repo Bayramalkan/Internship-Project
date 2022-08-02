@@ -1,7 +1,12 @@
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html,
 body {
-
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
   background-color: #1b1c1d;
   
   /* background-color: #000; */
@@ -18,3 +23,4 @@ a {
 * {
   box-sizing: border-box;
 }
+
