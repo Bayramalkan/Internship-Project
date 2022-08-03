@@ -1,32 +1,11 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import styles from "./Card.module.css";
 // const data = require("../../data/response.json");
-import axios from "axios";
+// import axios from "axios";
 
-export async function getServerSiderProps() {
-  // response.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate=59");
-  const response = await axios.get(
-    "https://monster-p.mncdn.com/cckeyboardapp/response.json"
-  );
-  // console.log(response.data);
-  return { props: { data: response.data } };
-}
-
-function CardList(props) {
+function CardList({ data }) {
   // const axios = require("axios");
-  const [result, setResult] = useState([]);
-  useEffect(() => {
-    // setResult(data);
-    getServerSiderProps().then((res) => {
-      setResult(res.props.data);
-      // console.log(res.props.data);
-      // console.log(result);
-    });
-  }, []);
-
-  // console.log(data);
-
   // const [data, setData] = useState([]);
 
   // useEffect(() => {
@@ -44,15 +23,15 @@ function CardList(props) {
 
   // console.log(ids);
 
-  const ProductResult = result?.data?.products.filter((item) => {
+  const result = data?.data?.products.filter((item) => {
     return item.catIds.includes("6224");
   });
-  console.log("resultaaaa: ", ProductResult);
+  console.log("result: ", result);
 
   return (
     <div className={styles.cardListwrapper}>
-      {ProductResult?.map((item, index) => {
-        return <Card key={index} item={item} index={index} />;
+      {result?.map((item, index) => {
+        return <Card key={index} item={item} />;
       })}
     </div>
   );

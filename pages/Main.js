@@ -2,7 +2,7 @@ import React from "react";
 import Rest from "./Rest";
 import Top from "./Top";
 
-const Main = () => {
+const Main = ({ data }) => {
   return (
     <div
       style={{
@@ -15,7 +15,7 @@ const Main = () => {
       }}
     >
       <Top />
-      <Rest />
+      <Rest data={data} />
     </div>
   );
 };

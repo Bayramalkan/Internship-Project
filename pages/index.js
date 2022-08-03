@@ -5,7 +5,7 @@ import Main from "./Main";
 
 // MUI Imports
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,7 +21,23 @@ export default function Home() {
           href="https://fonts.gstatic.com"
         />
       </Head>
-      <Main />
+      <Main data={data} />
     </div>
   );
+}
+
+export async function getServerSideProps({ req, res }) {
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
+
+  const axios = require("axios");
+  const data = await axios.get(
+    "https://monster-p.mncdn.com/cckeyboardapp/response.json"
+  );
+
+  return {
+    props: { data: data.data },
+  };
 }
