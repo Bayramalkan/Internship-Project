@@ -31,7 +31,7 @@ function CardList() {
   return (
     <div className={styles.cardListwrapper}>
       {result?.map((item, index) => {
-        return <Card key={index} item={item} />;
+        return <Card key={index} item={item} index={index} />;
       })}
     </div>
   );

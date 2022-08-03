@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ["img-monsternotebook.mncdn.com", "i.picsum.photos"],
+    imageSizes: [253],
   },
 };
 

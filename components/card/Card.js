@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 //GEÇİCİ ÇÖZÜM
 import Image from "next/image";
 
-const Card = ({ item }) => {
+const Card = ({ item, index }) => {
   // console.log(item);
   // console.log(item?.smallImageUrl);
   // const src = { src: item?.smallImageUrl };
@@ -17,8 +17,10 @@ const Card = ({ item }) => {
           height={168}
           layout="responsive"
           priority={true}
-          // sizes="50vw"
+          // srcset="(max-height: 500px) 1000px"
+          // sizes="253px"
           // loading="lazy"
+          // loading={item?.smallImageUrl.length === index + 1 ? "eager" : "lazy"}
           objectFit="cover"
           objectPosition="center"
         />
