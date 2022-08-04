@@ -1,26 +1,28 @@
 .cardListwrapper{
     display: flex;
     flex-wrap: wrap;
+    /* flex: 75%; */
+    /* flex: 0 1 66%; */
     /* justify-content: center; */
     /* flex: 75%; */
     background-color: #1b1c1d;
-    width: 100%;
+    /* width: 100vw; */
     /* margin-left: 10px; */
     margin-top: 50px;
     gap: 20px;
     /* max-width: 100%; */
+    max-width: 50%;
     
 
 }
 
-
-
-
 .cardwrapper{
     
-    width:292px;
-    max-width: 100%;
-
+    /* width:292px; */
+    width: 32%;
+    /* min-height: 100%; */
+    /* max-width: 292px; */
+    
     border: gray solid 1px;
 
 }

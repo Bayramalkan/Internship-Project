@@ -1,11 +1,25 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 import styles from "../styles/Home.module.css";
 import Main from "./Main";
 
 // MUI Imports
 
+export async function getServerSideProps() {
+  const resp = await fetch(
+    "https://monster-p.mncdn.com/cckeyboardapp/response.json"
+  );
+
+  return {
+    props: {
+      data: await resp.json(),
+    },
+  };
+}
+
 export default function Home({ data }) {
+  console.log("sasasas", data);
   return (
     <div className={styles.container}>
       <Head>
@@ -21,23 +35,26 @@ export default function Home({ data }) {
           href="https://fonts.gstatic.com"
         />
       </Head>
-      <Main data={data} />
+      {[data].map((item) => (
+        <Main key={item.id} data={item} />
+      ))}
+      {/* <Main /> */}
     </div>
   );
 }
 
-export async function getServerSideProps({ req, res }) {
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
-  );
+// export async function getServerSideProps({ req, res }) {
+//   res.setHeader(
+//     "Cache-Control",
+//     "public, s-maxage=10, stale-while-revalidate=59"
+//   );
 
-  const axios = require("axios");
-  const data = await axios.get(
-    "https://monster-p.mncdn.com/cckeyboardapp/response.json"
-  );
+//   const axios = require("axios");
+//   const data = await axios.get(
+//     "https://monster-p.mncdn.com/cckeyboardapp/response.json"
+//   );
 
-  return {
-    props: { data: data.data },
-  };
-}
+//   return {
+//     props: { data: data.data },
+//   };
+// }

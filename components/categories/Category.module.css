@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-
+    
     margin-top: 50px;
     
 }
@@ -12,10 +12,13 @@
 .categoryWrapper{
     /* display: flex; */
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+    /* justify-content: center; */
     /* width: 100%; */
-    max-width: 268px;
+    /* max-width: 268px; */
+    width: 268px;
+    max-width: 100%;
     height: 100%;
     background-color: #161617;
     border: 1px solid #323334;
