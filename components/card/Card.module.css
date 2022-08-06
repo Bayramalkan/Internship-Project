@@ -6,22 +6,25 @@
     /* justify-content: center; */
     /* flex: 75%; */
     background-color: #1b1c1d;
+    background-color: #323334;
+    
     /* width: 100vw; */
     /* margin-left: 10px; */
     margin-top: 50px;
     gap: 20px;
     /* max-width: 100%; */
-    max-width: 50%;
-    
+    max-width: 1230px
 
+    
 }
 
 .cardwrapper{
     
     /* width:292px; */
-    width: 32%;
     /* min-height: 100%; */
     /* max-width: 292px; */
+
+    width: 31%;
     
     border: gray solid 1px;
 
@@ -209,6 +212,18 @@
     color: #fff;
 }
 
+@media screen and (max-width: 1230px) {
+
+    .cardListwrapper{
+        max-width: 100%;
+    }
+    .cardwrapper{
+        max-width: 32%;
+        /* max-width: 100%; */
+    }
+    
+}
+
 
 @media screen and (max-width: 960px) {
 
@@ -227,6 +242,7 @@
         padding: 31px;
         gap: 0px;
         width: 100%;
+        max-width: 100%;
     }
     .cardinfo{
         max-width: 100%;
@@ -239,6 +255,7 @@
         max-width: 49%;
         margin: 0 auto;
         margin-bottom: 20px;
+        width: 100%;
         
     }
 }

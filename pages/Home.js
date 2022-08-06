@@ -6,17 +6,29 @@ import Navbar from "../components/navbar/Navbar";
 
 import styles from "../styles/Home.module.css";
 
-const Main = ({ data }) => {
+export async function getServerSideProps() {
+  const resp = await fetch(
+    "https://monster-p.mncdn.com/cckeyboardapp/response.json"
+  );
+
+  return {
+    props: {
+      data: await resp.json(),
+    },
+  };
+}
+
+const Home = ({ data }) => {
   return (
     <div
-      style={{
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        margin: "0 auto",
-      }}
+    //   style={{
+    //     width: "100%",
+    //     display: "flex",
+    //     alignItems: "center",
+    //     justifyContent: "center",
+    //     flexDirection: "column",
+    //     margin: "0 auto",
+    //   }}
     >
       {/* <Top />
       <Rest data={data} /> */}
@@ -32,4 +44,4 @@ const Main = ({ data }) => {
   );
 };
 
-export default Main;
+export default Home;
