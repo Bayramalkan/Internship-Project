@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarLogo from "../Logo/NavbarLogo";
 import styles from "./Navbar.module.css";
+import MonsterLogo from "../../assets/monsterLogo.png";
 
 // MUI Imports
 import SearchIcon from "@mui/icons-material/Search";
@@ -8,6 +9,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { color, style } from "@mui/system";
 import NavbarBottom from "../navbar-bottom/NavbarBottom";
+import Image from "next/image";
 
 // TASKS
 // Responsive sorunları çözülmeli.
@@ -40,7 +42,21 @@ const Navbar = () => {
         </div>
         <div className={styles.navbarmiddlewrapper}>
           <div className={styles.navbarmiddleleft}>
-            <NavbarLogo width={300} height={65} />
+            {/* <NavbarLogo width={300} height={65} /> */}
+            <Image
+              src={MonsterLogo}
+              width={245}
+              height={65}
+              alt="Monster Logo"
+              // layout="responsive"
+              priority={true}
+              // srcset="(max-height: 500px) 1000px"
+              // sizes="253px"
+              // loading="lazy"
+              // loading={item?.smallImageUrl.length === index + 1 ? "eager" : "lazy"}
+              // objectFit="cover"
+              // objectPosition="center"
+            />
           </div>
           <div className={styles.navbarcenter}>
             <div className={styles.navbarsearchbarinner}>

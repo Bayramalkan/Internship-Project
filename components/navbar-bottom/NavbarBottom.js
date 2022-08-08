@@ -19,7 +19,7 @@ const NavbarBottom = () => {
         <ul className={styles.navbarbottomlist}>
           {NavbarBottomData.map((item, index) => {
             return (
-              <li className={styles.navbarbottomitem} key={index}>
+              <li className={styles.navbarbottomlink} key={index}>
                 {item}
               </li>
             );

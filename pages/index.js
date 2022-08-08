@@ -5,23 +5,24 @@ import Navbar from "../components/navbar/Navbar";
 import FirstSeciton from "../components/first-section/FirstSection";
 import CategoryList from "../components/categories/CategoryList";
 import CardList from "../components/card/CardList";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Index.module.css";
+
 // import Home from "./Home";
 // import Main from "../../Main";
 
 // MUI Imports
 
-// export async function getServerSideProps() {
-//   const resp = await fetch(
-//     "https://monster-p.mncdn.com/cckeyboardapp/response.json"
-//   );
+export async function getServerSideProps() {
+  const resp = await fetch(
+    "https://monster-p.mncdn.com/cckeyboardapp/response.json"
+  );
 
-//   return {
-//     props: {
-//       data: await resp.json(),
-//     },
-//   };
-// }
+  return {
+    props: {
+      data: await resp.json(),
+    },
+  };
+}
 
 export default function Home({ data }) {
   console.log("sasasas", data);
@@ -40,25 +41,13 @@ export default function Home({ data }) {
           href="https://fonts.gstatic.com"
         />
       </Head>
-      {/* <Navbar />
+      <Navbar />
       <NavbarBottom />
-      <FirstSeciton />
-      <div
-        style={{
-          backgroundColor: "#323334",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      {/* <FirstSeciton /> */}
+      <div className={styles.restContainer}>
         <CategoryList data={data} />
         <CardList data={data} />
-      </div> */}
-
-      {/* <Home /> */}
-      {/* {[data].map((item) => (
-        <Main key={item.id} data={item} />
-      ))} */}
-      {/* <Main /> */}
+      </div>
     </div>
   );
 }

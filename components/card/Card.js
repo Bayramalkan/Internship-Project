@@ -19,7 +19,7 @@ const Card = ({ item, index }) => {
             layout="responsive"
             priority={true}
             // srcset="(max-height: 500px) 1000px"
-            // sizes="253px"
+            sizes="253px"
             // loading="lazy"
             // loading={item?.smallImageUrl.length === index + 1 ? "eager" : "lazy"}
             objectFit="cover"
@@ -62,7 +62,8 @@ const Card = ({ item, index }) => {
           {/* <div className={styles.cardprice}>        </div> */}
           <h1
             style={{
-              marginLeft: "20px",
+              paddingLeft: "20px",
+              maxWidth: "100%",
             }}
           >
             {item?.salePrice} {item?.currency}

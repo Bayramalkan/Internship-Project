@@ -2,21 +2,27 @@
     display: flex;
     flex-wrap: wrap;
     /* flex: 75%; */
-    /* flex: 0 1 66%; */
-    /* justify-content: center; */
+    /* flex: 0 1 66%;    */
+    justify-content: space-between;
     /* flex: 75%; */
     background-color: #1b1c1d;
     background-color: #323334;
-    
+    width: 50%;
     /* width: 100vw; */
     /* margin-left: 10px; */
     margin-top: 50px;
-    gap: 20px;
+    /* gap: 20px; */
     /* max-width: 100%; */
     max-width: 1230px
 
     
 }
+
+/* .card{
+    background-image: url("https://img-monsternotebook.mncdn.com/images/frontend/product-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
 .cardwrapper{
     
@@ -24,7 +30,7 @@
     /* min-height: 100%; */
     /* max-width: 292px; */
 
-    width: 31%;
+    width: 32.333%;
     
     border: gray solid 1px;
 
@@ -159,6 +165,7 @@
     color: #fff;
     font-weight: normal;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 

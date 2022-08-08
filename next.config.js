@@ -3,17 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["img-monsternotebook.mncdn.com", "i.picsum.photos"],
+    domains: [
+      "img-monsternotebook.mncdn.com",
+      "i.picsum.photos",
+      "www.monsternotebook.com.tr",
+    ],
     imageSizes: [253],
-  },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/Home",
-        permanent: true,
-      },
-    ];
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
 
   // strictMode: true,
