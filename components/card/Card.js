@@ -3,10 +3,12 @@ import styles from "./Card.module.css";
 //GEÇİCİ ÇÖZÜM
 import Image from "next/image";
 
-const Card = ({ item, index }) => {
+const Card = ({ item, index, check }) => {
   // console.log(item);
   // console.log(item?.smallImageUrl);
   // const src = { src: item?.smallImageUrl };
+  // console.log(item);
+  // console.log(stock);
   return (
     <div className={styles.cardwrapper}>
       <div className={styles.card}>
@@ -24,6 +26,7 @@ const Card = ({ item, index }) => {
             // loading={item?.smallImageUrl.length === index + 1 ? "eager" : "lazy"}
             objectFit="cover"
             objectPosition="center"
+            alt="smallImageUrl"
           />
         )}
 

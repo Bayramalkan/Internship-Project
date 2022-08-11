@@ -6,6 +6,7 @@ import FirstSeciton from "../components/first-section/FirstSection";
 import CategoryList from "../components/categories/CategoryList";
 import CardList from "../components/card/CardList";
 import styles from "../styles/Index.module.css";
+import Stock from "../components/stock-sort/Stock";
 
 // import Home from "./Home";
 // import Main from "../../Main";
@@ -41,9 +42,9 @@ export default function Home({ data }) {
           href="https://fonts.gstatic.com"
         />
       </Head>
+      {/* <FirstSeciton /> */}
       <Navbar />
       <NavbarBottom />
-      {/* <FirstSeciton /> */}
       <div className={styles.restContainer}>
         <CategoryList data={data} />
         <CardList data={data} />
