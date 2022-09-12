@@ -9,7 +9,7 @@ import { AccordionActions } from "@mui/material";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import Image from "next/image";
 
-function Filter({ filterGroupName }) {
+function Filter({ filter }) {
   return (
     <div className={styles.filterWrapper}>
       {" "}
@@ -39,9 +39,9 @@ function Filter({ filterGroupName }) {
 
         <Typography>Semruk S7</Typography>
       </Accordion> */}
-      {filterGroupName.map((filter, index) => (
+      {filter.map((filter, index) => (
         <div key={index} className={styles.filter}>
-          {filter}
+          {filter.filterGroupName}
         </div>
       ))}
     </div>

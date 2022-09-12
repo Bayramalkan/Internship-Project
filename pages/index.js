@@ -46,7 +46,7 @@ export default function Home({ data }) {
       <Navbar />
       <NavbarBottom />
       <div className={styles.restContainer}>
-        <CategoryList data={data} />
+        {/* <CategoryList data={data} /> */}
         <CardList data={data} />
       </div>
     </div>

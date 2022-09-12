@@ -11,7 +11,7 @@ function Sort() {
   return (
     <div className={styles.sort}>
       <div className={styles.sortMenu} onClick={handleDropDown}>
-        SIRALA: MONSTER'IN SEÇİMİ
+        SIRALA: MONSTER IN SEÇİMİ
         {dropDown ? (
           <ul className={styles.sortList}>
             <li>1</li>

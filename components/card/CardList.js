@@ -30,7 +30,7 @@ function CardList({ data }) {
   const result = data?.data?.products.filter((item) => {
     return item.catIds.includes("6224");
   });
-  console.log("result: ", result);
+  // console.log("result: ", result);
 
   const stock = result?.filter((item) => {
     // console.log(item);
@@ -44,43 +44,84 @@ function CardList({ data }) {
 
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
-    console.log(isChecked);
+    // console.log(isChecked);
   };
 
-  function myFunction(obj, prop) {
-    return obj.reduce(function (acc, item) {
-      let key = item[prop];
-      if (!acc[key]) {
-        acc[key] = [];
-      }
-      acc[key].push(item);
+  // function myFunction(obj, prop) {
+  //   return obj.reduce(function (acc, item) {
+  //     let key = item[prop];
+  //     if (!acc[key]) {
+  //       acc[key] = [];
+  //     }
+  //     acc[key].push(item);
 
-      return acc;
-    }, []);
-  }
-  let grouped = myFunction(data?.data.filters, "filterGroupName");
-  console.log(grouped);
+  //     return acc;
+  //   }, []);
+  // }
+  // let grouped = myFunction(data?.data.filters, "filterGroupName");
+  // console.log(grouped);
 
-  let groupName = myFunction(grouped, "filterName");
-  console.log(" groupName:", groupName);
+  // let groupName = myFunction(grouped, "filterName");
+  // console.log(" groupName:", groupName);
 
   const [filter, setFilter] = useState([]);
   const [filterGroupName, setFilterGroupName] = useState([]);
   const [filterName, setFilterName] = useState([]);
-  Object.keys(grouped).forEach((key, index) => {
-    // console.log(index)
-    filter.push(grouped[key]);
-    console.log(key, grouped[key]);
+  useEffect(() => {
+    function myFunction(obj, prop) {
+      return obj.reduce(function (acc, item) {
+        let key = item[prop];
+        if (!acc[key]) {
+          acc[key] = [];
+        }
+        acc[key].push(item);
 
-    // console.log("group key:", grouped[key]);
-    filterGroupName.push(key);
+        return acc;
+      }, []);
+    }
 
-    grouped[key].forEach((item) => {
-      filterName.push(item.filterName);
+    let grouped = myFunction(data?.data.filters, "filterGroupName");
+    // console.log(grouped);
+
+    let groupName = myFunction(grouped, "filterName");
+    // console.log(" groupName:", groupName);
+
+    Object.keys(grouped).forEach((key, index) => {
+      // console.log(index)
+      // filter.push(grouped[key]);
+      filter.push([
+        {
+          filterGroupName: [key],
+          filterName: [
+            ...grouped[key].map((item) => {
+              return item.filterName;
+            }),
+          ],
+        },
+      ]);
+      // console.log("filter: ", filter);
+
+      // console.log(key, grouped[key]);
+
+      // console.log("group key:", grouped[key]);
+      // filterGroupName.push(key);
+
+      // grouped[key].forEach((item) => {
+      //   filterName.push(item.filterName);
+      // });
+
+      // filterName.push(grouped[key][0].filterName);
     });
+  }, [filterGroupName]);
 
-    // filterName.push(grouped[key][0].filterName);
-  });
+  // filter.map((item) => {
+  //   console.log("item: ", item.filterGroupName);
+  // }),
+  //   filter.map((item) => {
+  //     item.filterName.map((item) => {
+  //       console.log("filter name: ", item.filterName);
+  //     });
+  //   });
 
   // filter.map((item, index) => {
   //   item.map((item, index) => {
@@ -107,9 +148,9 @@ function CardList({ data }) {
   //     });
   // });
   // });
-  console.log("filter: ", filter);
-  console.log("filterGroupName: ", filterGroupName);
-  console.log("filterName: ", filterName);
+  // console.log("filter: ", filter);
+  // console.log("filterGroupName: ", filterGroupName);
+  // console.log("filterName: ", filterName);
   //     console.log(filter);
   // }),
   // setFilter(filter);
@@ -123,7 +164,7 @@ function CardList({ data }) {
 
   useEffect(() => {
     isChecked ? setRenderData(stock) : setRenderData(result);
-    console.log(stock);
+    // console.log(stock);
   }, [isChecked]);
 
   return (
@@ -135,10 +176,10 @@ function CardList({ data }) {
         width: "100%",
       }}
     >
-      <Stock check={handleCheckboxChange} />
+      {/* <Stock check={handleCheckboxChange} /> */}
       {/* <Sort /> */}
 
-      <Filter filterGroupName={filterGroupName} />
+      {/* <Filter filter={filter} /> */}
 
       <div className={styles.cardListwrapper}>
         {renderData?.map((item, index) => {
